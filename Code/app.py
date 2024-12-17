@@ -1,3 +1,8 @@
+import subprocess
+
+# Install packages from requirements.txt
+subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+
 from flask import *
 import os
 from werkzeug.utils import secure_filename
