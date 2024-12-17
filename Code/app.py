@@ -31,7 +31,7 @@ from tensorflow.keras.applications.resnet50 import ResNet50
 
 app = Flask(__name__)
 
-MODEL= tf.keras.models.load_model(r".\saved_model\1", compile=False)
+MODEL= tf.keras.models.load_model(r"/saved_model/1", compile=False)
 CLASS_NAMES= ['hairytonguedataset',
  'healthytonguedataset',
  'leokoplakiatonguedataset',
@@ -41,7 +41,7 @@ CLASS_NAMES= ['hairytonguedataset',
 
 disease_dictionary= dict()
 
-with open(r".\saved_model\details.json", 'r') as source_file:
+with open(r"/saved_model/details.json", 'r') as source_file:
     CONDITION_DATA = json.load(source_file)
     if 'disease_condition' in CONDITION_DATA:
      disease_con= CONDITION_DATA['disease_condition']
