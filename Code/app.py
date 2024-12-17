@@ -1,7 +1,8 @@
-import subprocess
+import pip
 
 # Install packages from requirements.txt
-subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+pip.main(['install', '-r', 'requirements.txt'])
+
 
 from flask import *
 import os
