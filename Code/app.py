@@ -49,22 +49,22 @@ with open(r"saved_model/details.json", 'r') as source_file:
 
 
 @app.route('/')
-@app.route('templates/first')
+@app.route('/templates/first')
 def first():
     return render_template('first.html')
 
  
   
     
-@app.route('templates/login')
+@app.route('/templates/login')
 def login():
     return render_template('login.html')
-@app.route('templates/chart')
+@app.route('/templates/chart')
 def chart():
     return render_template('chart.html')
 
 
-@app.route('templates/index', methods=['GET'])
+@app.route('/templates/index', methods=['GET'])
 def index():
     return render_template('index.html')
 
@@ -75,7 +75,7 @@ def read_file_as_image(data)-> np.ndarray:
     return image
 
 
-@app.route('templates/index', methods=['POST'])
+@app.route('/templates/index', methods=['POST'])
 def predict():
     image= request.files['imagefile']
     image= Image.open(image) 
